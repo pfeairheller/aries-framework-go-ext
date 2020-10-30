@@ -35,7 +35,7 @@ jobs:
     timeout-minutes: 15
     env:
       UNIT_TESTS_PATH: component/didcomm/transport/amqp
-      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_HOST: localhost
     steps:
       - name: Setup Go 1.15
         uses: actions/setup-go@v2

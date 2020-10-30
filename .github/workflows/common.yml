@@ -28,7 +28,14 @@ jobs:
   unitTest:
     name: Unit test
     runs-on: ubuntu-18.04
+    services:
+      rabbitmq:
+        image: rabbitmq
+        ports:
+          - 5672:5672
     timeout-minutes: 15
+    env:
+      RABBITMQ_HOST: localhost
     steps:
       - name: Setup Go 1.15
         uses: actions/setup-go@v2

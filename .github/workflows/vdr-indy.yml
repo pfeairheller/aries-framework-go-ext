@@ -6,8 +6,6 @@
 name: vdr-indy
 on:
   push:
-    branches:
-      - "testing-build"
     paths:
       - 'component/vdr/indy/**'
   pull_request:

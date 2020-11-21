@@ -10,7 +10,7 @@ run:
   issues-exit-code: 1
   tests: true
   build-tags: [""]
-  skip-dirs:  ["pkg/vdr/indy"]
+  skip-dirs:  ["component/vdr/indy"]
 
 output:
   format: colored-line-number

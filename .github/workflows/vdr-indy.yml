@@ -6,8 +6,6 @@
 name: vdr-indy
 on:
   push:
-    paths:
-      - 'component/vdr/indy/**'
   pull_request:
     paths:
       - 'component/vdr/indy/**'

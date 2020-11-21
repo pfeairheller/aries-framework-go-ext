@@ -1,3 +1,5 @@
+// +build !codeanalysis
+
 /*
 Copyright Scoir Inc. All Rights Reserved.
 

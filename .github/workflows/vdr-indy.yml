@@ -6,6 +6,8 @@
 name: vdr-indy
 on:
   push:
+    branches:
+      - "testing-build"
     paths:
       - 'component/vdr/indy/**'
   pull_request:
@@ -18,7 +20,7 @@ jobs:
     env:
       LINT_PATH: component/vdr/indy
     runs-on: ubuntu-18.04
-    container: canislabs/canisbuild:latest
+    container: canislabs/canisbuild:golang-1.15
     steps:
       - uses: actions/checkout@v2
 
@@ -28,7 +30,7 @@ jobs:
   unitTest:
     name: Unit test
     runs-on: ubuntu-18.04
-    container: canislabs/canisbuild:latest
+    container: canislabs/canisbuild:golang-1.15
     timeout-minutes: 15
     env:
       UNIT_TESTS_PATH: component/vdr/indy

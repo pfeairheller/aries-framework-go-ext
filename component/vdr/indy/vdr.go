@@ -1,5 +1,3 @@
-// +build !codeanalysis
-
 /*
 Copyright Scoir Inc. All Rights Reserved.
 
@@ -24,6 +22,7 @@ import (
 	"github.com/hyperledger/indy-vdr/wrappers/golang/vdr"
 )
 
+//nolint
 // Client is the API for interacting with the Indy VDR client.
 type Client interface {
 	GetNym(did string) (*vdr.ReadReply, error)

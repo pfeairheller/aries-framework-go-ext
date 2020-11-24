@@ -15,7 +15,7 @@ if [ -z "$lint_path" ]; then
 fi
 
 DOCKER_CMD=${DOCKER_CMD:-docker}
-GOLANGCI_LINT_IMAGE="golangci/golangci-lint:v1.31.0"
+GOLANGCI_LINT_IMAGE="canislabs/golangci-lint:latest"
 
 if [ -z "$lint_path" ]; then
   lint_path=./

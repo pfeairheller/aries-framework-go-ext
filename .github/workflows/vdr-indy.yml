@@ -16,7 +16,6 @@ jobs:
     env:
       LINT_PATH: component/vdr/indy
     runs-on: ubuntu-18.04
-    container: canislabs/canisbuild:golang-1.15
     steps:
       - uses: actions/checkout@v2
 

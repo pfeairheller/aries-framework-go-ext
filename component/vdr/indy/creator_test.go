@@ -11,9 +11,8 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btcutil/base58"
-	"github.com/stretchr/testify/require"
-
 	vdrapi "github.com/hyperledger/aries-framework-go/pkg/framework/aries/api/vdr"
+	"github.com/stretchr/testify/require"
 
 	. "github.com/hyperledger/aries-framework-go-ext/component/vdr/indy"
 )

@@ -14,9 +14,8 @@ import (
 	"github.com/hyperledger/indy-vdr/wrappers/golang/vdr"
 	"github.com/stretchr/testify/require"
 
-	"github.com/hyperledger/aries-framework-go-ext/component/vdr/indy/mock"
-
 	. "github.com/hyperledger/aries-framework-go-ext/component/vdr/indy"
+	"github.com/hyperledger/aries-framework-go-ext/component/vdr/indy/mock"
 )
 
 func TestVDRI_Read(t *testing.T) {
@@ -134,6 +133,7 @@ func TestVDRI_Read(t *testing.T) {
 			got, err := r.Read(thisTest.args.did, thisTest.args.opts...)
 			if (err != nil) != thisTest.wantErr {
 				t.Errorf("Read() error = %v, wantErr %v", err, thisTest.wantErr)
+
 				return
 			}
 			thisTest.want(t, got)

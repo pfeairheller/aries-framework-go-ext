@@ -18,7 +18,6 @@ import (
 
 	"github.com/hyperledger/aries-framework-go/pkg/doc/did"
 	vdrapi "github.com/hyperledger/aries-framework-go/pkg/framework/aries/api/vdr"
-
 	"github.com/hyperledger/indy-vdr/wrappers/golang/vdr"
 )
 
@@ -99,6 +98,7 @@ func WithIndyVDRGenesisFile(genesisFile string) Option {
 		gfr, err := os.Open(filepath.Clean(genesisFile))
 		if err != nil {
 			log.Println("unable to open genesis file", err)
+
 			return
 		}
 

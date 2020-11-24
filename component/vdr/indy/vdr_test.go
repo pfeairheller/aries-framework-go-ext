@@ -17,9 +17,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/hyperledger/aries-framework-go-ext/component/vdr/indy/mock"
-
 	. "github.com/hyperledger/aries-framework-go-ext/component/vdr/indy"
+	"github.com/hyperledger/aries-framework-go-ext/component/vdr/indy/mock"
 )
 
 const (
@@ -79,6 +78,7 @@ func TestNew(t *testing.T) {
 			got, err := New(thisTest.args.methodName, thisTest.args.opts...)
 			if (err != nil) != thisTest.wantErr {
 				t.Errorf("New() error = %v, wantErr %v", err, thisTest.wantErr)
+
 				return
 			}
 			if !reflect.DeepEqual(got, thisTest.want) {

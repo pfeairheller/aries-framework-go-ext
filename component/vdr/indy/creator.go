@@ -11,9 +11,7 @@ import (
 	"time"
 
 	"github.com/btcsuite/btcutil/base58"
-
 	"github.com/hyperledger/aries-framework-go/pkg/doc/did"
-
 	vdrapi "github.com/hyperledger/aries-framework-go/pkg/framework/aries/api/vdr"
 )
 

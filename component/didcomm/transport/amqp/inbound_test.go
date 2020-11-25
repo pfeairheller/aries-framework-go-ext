@@ -67,7 +67,6 @@ func TestMain(m *testing.M) {
 		panic(fmt.Sprintf("check Rabbit: %v", err))
 	}
 
-	log.Println("starting to run")
 	code = m.Run()
 }
 
@@ -78,7 +77,7 @@ func checkRabbit() error {
 		_, err := amqp.Dial(amqpAddr)
 
 		return err
-	}, backoff.WithMaxRetries(backoff.NewConstantBackOff(time.Second), retries))
+	}, backoff.WithMaxRetries(backoff.NewConstantBackOff(10*time.Second), retries))
 }
 
 func TestInboundTransport(t *testing.T) {

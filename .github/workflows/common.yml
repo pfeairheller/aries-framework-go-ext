@@ -35,6 +35,8 @@ jobs:
     name: Unit test
     runs-on: ubuntu-18.04
     timeout-minutes: 15
+    env:
+      EXCLUDE_TEST_PATH: ./component/vdr/indy
     steps:
       - name: Setup Go 1.15
         uses: actions/setup-go@v2

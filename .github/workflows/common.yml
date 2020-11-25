@@ -34,7 +34,6 @@ jobs:
   unitTest:
     name: Unit test
     runs-on: ubuntu-18.04
-    container: canislabs/canisbuild:golang-1.15
     timeout-minutes: 15
     steps:
       - name: Setup Go 1.15

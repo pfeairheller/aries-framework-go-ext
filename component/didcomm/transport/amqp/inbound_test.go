@@ -77,7 +77,7 @@ func checkRabbit() error {
 		_, err := amqp.Dial(amqpAddr)
 
 		return err
-	}, backoff.WithMaxRetries(backoff.NewConstantBackOff(10*time.Second), retries))
+	}, backoff.WithMaxRetries(backoff.NewConstantBackOff(time.Second), retries))
 }
 
 func TestInboundTransport(t *testing.T) {

@@ -9,6 +9,7 @@ package amqp_test
 import (
 	"errors"
 	"fmt"
+	"log"
 	"os"
 	"testing"
 	"time"
@@ -40,6 +41,7 @@ func TestMain(m *testing.M) {
 
 	pool, err := dctest.NewPool("")
 	if err != nil {
+		log.Println("new pool", err)
 		panic(fmt.Sprintf("pool: %v", err))
 	}
 
@@ -50,6 +52,7 @@ func TestMain(m *testing.M) {
 		},
 	})
 	if err != nil {
+		log.Println("run", err)
 		panic(fmt.Sprintf("run with options: %v", err))
 	}
 
@@ -60,9 +63,11 @@ func TestMain(m *testing.M) {
 	}()
 
 	if err := checkRabbit(); err != nil {
+		fmt.Println("check", err)
 		panic(fmt.Sprintf("check Rabbit: %v", err))
 	}
 
+	log.Println("starting to run")
 	code = m.Run()
 }
 
